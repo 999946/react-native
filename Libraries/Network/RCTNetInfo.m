@@ -75,7 +75,7 @@ static void RCTReachabilityCallback(__unused SCNetworkReachabilityRef target, SC
 - (void)startObserving
 {
   _status = RCTReachabilityStateUnknown;
-  _reachability = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, _host.UTF8String ?: "apple.com");
+  _reachability = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, _host.UTF8String ?: "baidu.com");
   SCNetworkReachabilityContext context = { 0, ( __bridge void *)self, NULL, NULL, NULL };
   SCNetworkReachabilitySetCallback(_reachability, RCTReachabilityCallback, &context);
   SCNetworkReachabilityScheduleWithRunLoop(_reachability, CFRunLoopGetMain(), kCFRunLoopCommonModes);
